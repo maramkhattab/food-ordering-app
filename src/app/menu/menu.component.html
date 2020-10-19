@@ -1,0 +1,22 @@
+<div *ngFor=" let item of menuItems; let i = index" class="row">
+
+    <div class="row">
+        <div class="col-md-10">
+            <h5 class="title"> {{item.name}}</h5>
+
+            <p>{{item.description}}</p>
+            <p> LE {{item.price}}</p>
+            <div class="qty mt-5">
+                <span class=" counter bg-dark minus" (click)="removeItem(i)">-</span>
+                <input type="number" class="count" name="qty" [value]="item.qty" />
+                <span class="counter bg-dark plus" (click)="addItem(i)">+</span>
+            </div>
+        </div>
+        <div class="col-md-2">
+            <img [src]="item.img" class="img-responsive" width="100%" />
+        </div>
+    </div>
+
+
+    <hr>
+</div>
