@@ -1,8 +1,4 @@
 import { MenuItem } from '../shared/menu-item.model';
-import { EventEmitter, Injectable } from '@angular/core';
-
-
-
 export class MenuDataService {
     menuItems: MenuItem[] = [new MenuItem("Pizza", "Pizza margherita with cheese and marinara sauce", 150, 0, "https://www.peoplemagazine.co.za/app/uploads/2017/09/cheese-pizza.jpg"),
     new MenuItem("Burger", "Cheese burger with mushroom and bacon.", 100, 0, "https://top10cairo.com/wp-content/uploads/2015/12/best-burger-restaurant-places-in-cairo.jpg"),

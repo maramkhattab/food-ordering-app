@@ -19,7 +19,7 @@
             </div>
 
 
-            <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">Login</button>
+            <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid" (click)="this.authService.login()">Login</button>
 
 
 

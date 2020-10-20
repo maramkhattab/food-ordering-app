@@ -14,7 +14,7 @@ import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 
 import { MenuDataService } from "./menu/menu-data.service"
-
+import { AuthService } from "./auth.service"
 
 
 @NgModule({
@@ -35,7 +35,7 @@ import { MenuDataService } from "./menu/menu-data.service"
     ReactiveFormsModule
   ],
 
-  providers: [MenuDataService],
+  providers: [MenuDataService, AuthService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
