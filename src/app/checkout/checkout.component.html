@@ -1,1 +1,25 @@
-<p>checkout works!</p>
+<div class=" checkoutContainer">
+    <h1>
+        Checkout
+    </h1>
+    <div class="item-list">
+        <div *ngFor=" let item of cartItems; " class="card mb-3 itemContainer">
+            <div class="grid-container">
+                <div class="item">
+                    {{item.name}}
+                </div>
+
+                <div class="item-quantity">
+                    {{item.quantity}}
+                </div>
+                <div class="item-price">
+                    {{item.price}}
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+    <button type="button" class="btn btn-light btn-outline-secondary checkout-btn" (click)="checkout()"> Checkout</button>
+</div>

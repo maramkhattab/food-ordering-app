@@ -1,24 +1,24 @@
 import { Component, OnInit } from '@angular/core';
-
+import { MenuItem } from '../shared/menu-item.model';
+import { MenuDataService } from "./menu-data.service"
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
   styleUrls: ['./menu.component.css']
 })
 export class MenuComponent implements OnInit {
-  menuItems = [{ name: "Pizza", description: "Pizza margherita with cheese and marinara sauce", price: 150, qty: 0, img: "https://www.peoplemagazine.co.za/app/uploads/2017/09/cheese-pizza.jpg" }, { name: "Burger", description: "Cheese burger with tomato and special sauce.", price: 100, qty: 0, img: "https://top10cairo.com/wp-content/uploads/2015/12/best-burger-restaurant-places-in-cairo.jpg" }]
-  constructor() { }
+  menuItems: MenuItem[];
+  constructor(private mdService: MenuDataService) { }
 
   ngOnInit(): void {
+    this.menuItems = this.mdService.getMenuItems();
   }
   addItem(i: number) {
-    this.menuItems[i].qty++;
-
+    this.mdService.increaseItemQuantity(i);
+    console.log(this.mdService.getCartItems())
   }
   removeItem(i: number) {
-    if (this.menuItems[i].qty != 0)
-      this.menuItems[i].qty--;
-
+    this.mdService.decreaseItemQuantity(i);
   }
 
 

@@ -1,27 +1,22 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { SignupComponent } from './signup/signup.component';
 import { CheckoutComponent } from './checkout/checkout.component';
 import { ItemListComponent } from './checkout/item-list/item-list.component';
-import { ItemComponent } from './checkout/item-list/item/item.component';
+
 import { HomeComponent } from './home/home.component';
 import { MenuComponent } from './menu/menu.component';
 import { LoginComponent } from './login/login.component';
 
-// const appRoutes: Routes = [
-//   { path: '', component: HomeComponent },
-//   { path: 'checkout', component: CheckoutComponent },
-//   { path: 'signup', component: SignupComponent },
-//   { path: 'menu', component: MenuComponent },
-//   { path: 'login', component: LoginComponent }
+import { MenuDataService } from "./menu/menu-data.service"
 
 
 
-// ];
 @NgModule({
   declarations: [
     AppComponent,
@@ -29,18 +24,18 @@ import { LoginComponent } from './login/login.component';
     SignupComponent,
     CheckoutComponent,
     ItemListComponent,
-    ItemComponent,
     HomeComponent,
     MenuComponent,
     LoginComponent
   ],
   imports: [
     BrowserModule,
-    // RouterModule.forRoot(appRoutes)
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
+    ReactiveFormsModule
   ],
 
-  providers: [],
+  providers: [MenuDataService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
