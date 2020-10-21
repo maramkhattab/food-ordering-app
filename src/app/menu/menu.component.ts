@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MenuItem } from '../shared/menu-item.model';
 import { MenuDataService } from "./menu-data.service"
+import { Router } from "@angular/router"
 @Component({
   selector: 'app-menu',
   templateUrl: './menu.component.html',
@@ -8,7 +9,7 @@ import { MenuDataService } from "./menu-data.service"
 })
 export class MenuComponent implements OnInit {
   menuItems: MenuItem[];
-  constructor(private mdService: MenuDataService) { }
+  constructor(private mdService: MenuDataService, private router: Router) { }
 
   ngOnInit(): void {
     this.menuItems = this.mdService.getMenuItems();
@@ -20,6 +21,8 @@ export class MenuComponent implements OnInit {
   removeItem(i: number) {
     this.mdService.decreaseItemQuantity(i);
   }
-
+  toCheckout() {
+    this.router.navigate(["checkout"])
+  }
 
 }

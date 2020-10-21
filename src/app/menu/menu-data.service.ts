@@ -1,10 +1,10 @@
 import { MenuItem } from '../shared/menu-item.model';
 export class MenuDataService {
-    menuItems: MenuItem[] = [new MenuItem("Pizza", "Pizza margherita with cheese and marinara sauce", 150, 0, "https://www.peoplemagazine.co.za/app/uploads/2017/09/cheese-pizza.jpg"),
-    new MenuItem("Burger", "Cheese burger with mushroom and bacon.", 100, 0, "https://top10cairo.com/wp-content/uploads/2015/12/best-burger-restaurant-places-in-cairo.jpg"),
-    new MenuItem("Chicken ceasar salad", "Iceberg lettuce, grilled chicken breast and ceasar sauce", 60, 0, "https://i2.wp.com/mygorgeousrecipes.com/wp-content/uploads/2019/01/Grilled-Chicken-Caesar-Salad-with-Heatlhy-Yogurt-Dressing-6.jpg"),
-    new MenuItem("Steak", "300g of premium grassfed meat", 250, 0, "https://i2.wp.com/www.foodrepublic.com/wp-content/uploads/2012/05/testkitchen_argentinesteak.jpg?resize=1280%2C%20560&ssl=1"),
-    new MenuItem("Mozzarella sticks", "Deep fried mozzarella sticks with our special marinara sauce", 80, 0, "https://cdn.shortpixel.ai/client/q_glossy,ret_img,w_700/https://thefoodcafe.com/wp-content/uploads/2018/04/Mozzarella-Sticks-5.jpg")
+    menuItems: MenuItem[] = [new MenuItem("Pizza", "Pizza margherita with cheese and marinara sauce", 150, 0, "https://pngimg.com/uploads/pizza/pizza_PNG44043.png"),
+    new MenuItem("Burger", "Cheese burger with mushroom and bacon.", 100, 0, "https://pngimg.com/uploads/burger_sandwich/burger_sandwich_PNG4159.png"),
+    new MenuItem("Grilled Chicken", "Half roasterie chicken.", 70, 0, "https://pngimg.com/uploads/fried_chicken/fried_chicken_PNG14091.png"),
+    new MenuItem("Steak", "300g of premium grassfed meat", 250, 0, "https://pngimg.com/uploads/steak/steak_PNG85.png"),
+    new MenuItem("Mozzarella sticks", "Deep fried mozzarella sticks with our special marinara sauce", 80, 0, "https://pngimg.com/uploads/soup/soup_PNG76.png")
     ]
     getMenuItems() {
         return this.menuItems;
