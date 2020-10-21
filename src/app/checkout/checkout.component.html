@@ -1,9 +1,9 @@
-<div class=" checkoutContainer">
-    <h1>
+<div class="container">
+    <h1 class="title">
         Checkout
     </h1>
     <div class="item-list">
-        <div *ngFor=" let item of cartItems; " class="card mb-3 itemContainer">
+        <div *ngFor=" let item of cartItems; " class="card mb-3 checkout-item-container">
             <div class="grid-container">
                 <div class="item">
                     {{item.name}}
@@ -20,7 +20,7 @@
         </div>
 
     </div>
-
-    <button type="button" class="btn btn-light btn-outline-secondary checkout-btn" (click)="checkout()"> Checkout</button>
-
+    <div style="text-align:center">
+        <button type="button" class="btn btn-primary checkout-btn" (click)="checkout()"> Checkout</button>
+    </div>
 </div>

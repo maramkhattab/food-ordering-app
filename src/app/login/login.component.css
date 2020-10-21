@@ -1,12 +1,9 @@
 .title{
     font-family: "Poppins", sans-serif;
-    
-
     margin: 20px 0 10px 0;
     font-size: 48px;
     font-weight: 700;
     line-height: 56px;
-    /* text-transform: uppercase; */
     color: #fff;
     text-align: center;
 }
