@@ -1,0 +1,28 @@
+.welcome{
+    font-family: "Poppins", sans-serif;
+    
+
+    margin: 30px 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    text-transform: uppercase;
+    color: #fff;
+}
+.landing-page{
+   
+    justify-content: center;
+  align-items: center;
+  
+  text-align: center;
+    width: 50%;
+   
+    margin-top: 10%;
+    margin-bottom: 10%;
+    
+    margin-left: 25%;
+
+    margin-right: 25%;
+ 
+
+}
