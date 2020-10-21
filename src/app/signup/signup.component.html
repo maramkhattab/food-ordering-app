@@ -1,49 +1,56 @@
-<div class="row">
-    <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
-        <form [formGroup]="signupForm">
-            <div class="form-group">
-                <input class="form-control" placeholder="Username" type="text" id="username" formControlName="username" />
-                <span class=" help-block" *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">
-                    <span *ngIf="signupForm.get('username').errors['required']">This field is required!</span>
-                </span>
-            </div>
-            <div class="form-group">
-                <input class="form-control" placeholder="Passsword" id="password" type="password" minlength="6" maxlength="25" formControlName="password"
-                />
-                <span class=" help-block" *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">
-                    <span *ngIf="signupForm.get('password').errors['required']">This field is required!</span>
-                    <span *ngIf="signupForm.get('password').errors['passwordLengthIncorrect']">Password must be between 8 to 25 characters long</span>
+<div class="container">
+    <h1 class="title">
+        Register now!
+    </h1>
+    <div class="row">
+        <div class="col-xs-12 col-sm-10 col-md-8 col-sm-offset-1 col-md-offset-2">
+            <form [formGroup]="signupForm">
+                <div class="form-group">
+                    <input class="form-control" placeholder="Username" type="text" id="username" formControlName="username" />
+                    <span class=" help-block" *ngIf="!signupForm.get('username').valid && signupForm.get('username').touched">
+                        <span *ngIf="signupForm.get('username').errors['required']">This field is required!</span>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" placeholder="Passsword" id="password" type="password" minlength="6" maxlength="25" formControlName="password"
+                    />
+                    <span class=" help-block" *ngIf="!signupForm.get('password').valid && signupForm.get('password').touched">
+                        <span *ngIf="signupForm.get('password').errors['required']">This field is required!</span>
+                        <span *ngIf="signupForm.get('password').errors['passwordLengthIncorrect']">Password must be between 8 to 25 characters long</span>
 
-                </span>
+                    </span>
 
-            </div>
-            <div class="form-group">
-                <input class="form-control" id="email" placeholder="Email" type="email" formControlName="email" />
-                <span class=" help-block" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
-                    <span *ngIf="signupForm.get('email').errors['required']">This field is required!</span>
-                    <span *ngIf="signupForm.get('email').errors['email']">Please enter a valid email.</span>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="email" placeholder="Email" type="email" formControlName="email" />
+                    <span class=" help-block" *ngIf="!signupForm.get('email').valid && signupForm.get('email').touched">
+                        <span *ngIf="signupForm.get('email').errors['required']">This field is required!</span>
+                        <span *ngIf="signupForm.get('email').errors['email']">Please enter a valid email.</span>
 
-                </span>
-            </div>
-            <div class="form-group">
-                <input class="form-control" id="mobile" placeholder="Mobile number" type="tel" formControlName="mobile" />
-                <span class=" help-block" *ngIf="!signupForm.get('mobile').valid && signupForm.get('mobile').touched">
-                    <span *ngIf="signupForm.get('mobile').errors['required']">This field is required!</span>
-                    <span *ngIf="signupForm.get('mobile').errors['mobileLengthIncorrect']">Please enter a valid mobile number.</span>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" id="mobile" placeholder="Mobile number" type="tel" formControlName="mobile" />
+                    <span class=" help-block" *ngIf="!signupForm.get('mobile').valid && signupForm.get('mobile').touched">
+                        <span *ngIf="signupForm.get('mobile').errors['required']">This field is required!</span>
+                        <span *ngIf="signupForm.get('mobile').errors['mobileLengthIncorrect']">Please enter a valid mobile number.</span>
 
-                </span>
-            </div>
-            <div class="form-group">
-                <textarea class=" form-control" placeholder="Address" id="Address" formControlName="address"></textarea>
-                <span class=" help-block" *ngIf="!signupForm.get('address').valid && signupForm.get('address').touched">
-                    This field is required!
-                </span>
-            </div>
+                    </span>
+                </div>
+                <div class="form-group">
+                    <textarea class=" form-control" placeholder="Address" id="Address" formControlName="address"></textarea>
+                    <span class=" help-block" *ngIf="!signupForm.get('address').valid && signupForm.get('address').touched">
+                        This field is required!
+                    </span>
+                </div>
+                <div style="text-align: center; margin-bottom: 20px">
+                    <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid" (click)="onSignup()">Sign up</button>
+                </div>
+                <p style="color:whitesmoke"> Already have an account?
+                    <a href="login">Login now!</a>
+                </p>
 
-            <button class="btn btn-primary" type="submit" [disabled]="!signupForm.valid" (click)="onSignup()">Signup</button>
-
-
-
-        </form>
+            </form>
+        </div>
     </div>
 </div>

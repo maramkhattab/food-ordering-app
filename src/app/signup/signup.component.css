@@ -1,6 +1,23 @@
+.title{
+    font-family: "Poppins", sans-serif;
+    
+
+    margin: 20px 0 10px 0;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 56px;
+    /* text-transform: uppercase; */
+    color: #fff;
+    text-align: center;
+}
+
+
 input.ng-invalid.ng-touched{
-    border: 1px solid red;
+    border: 3px solid red;
 }
 textarea.ng-inavlid.ng-touched{
     border: 1px solid red !important;
+}
+.help-block{
+    color:whitesmoke;
 }
