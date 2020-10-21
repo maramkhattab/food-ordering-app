@@ -1,7 +1,8 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 
 import { FormControl, FormGroup, Validators } from '@angular/forms';
-
+import { AuthService } from "../auth.service"
+import { Router } from "@angular/router"
 @Component({
   selector: 'app-signup',
   templateUrl: './signup.component.html',
@@ -11,7 +12,7 @@ export class SignupComponent implements OnInit {
   signupForm: FormGroup;
 
 
-  constructor() { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
     this.signupForm = new FormGroup({
@@ -39,6 +40,10 @@ export class SignupComponent implements OnInit {
 
 
     return null;
+  }
+  onSignup() {
+    this.authService.login();
+    this.router.navigate(["/"]);
   }
 
 }
