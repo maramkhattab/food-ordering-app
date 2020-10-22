@@ -4,12 +4,12 @@
     </h1>
     <div *ngFor=" let item of menuItems; let i = index" class="row ">
 
-        <div class="row menu-item-container rounded">
+        <div class="row menu-item-container">
             <div class="col-md-10">
                 <h5 class="item-name"> {{item.name}}</h5>
 
-                <p>{{item.description}}</p>
-                <p> LE {{item.price}}</p>
+                <p class="item-description">{{item.description}}</p>
+                <p class="item-price"> {{item.price}} EGP</p>
                 <div class="qty mt-5">
                     <span class=" counter bg-dark minus" (click)="removeItem(i)">-</span>
                     <input type="number" class="count" name="qty" [value]="item.quantity" />
